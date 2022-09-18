@@ -1,0 +1,130 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Harsh",
+      "author": "Ujas",
+      "category": "Ujas",
+      "views": 1509,
+      "downloads": 1003,
+      "resolution": "1440 * 2560",
+      "size": "1.4 mb",
+      "url": "OPEN IMAGE",
+      "collection": "None"
+    },
+    {
+      "id": 3,
+      "name": "harsh",
+      "author": "Vandan",
+      "category": "Vandan",
+      "views": 1509,
+      "downloads": 1003,
+      "resolution": "1440 * 2560",
+      "size": "1.4 mb",
+      "url": "OPEN IMAGE",
+      "collection": "None",
+      "photo": ""
+    },
+    {
+      "name": "OceanSide",
+      "id": 4,
+      "author": "Sanny",
+      "category": "Gradient",
+      "views": 1509,
+      "downloads": 1003,
+      "resolution": "1440 * 2560",
+      "size": "1.4 mb",
+      "url": "OPEN IMAGE",
+      "collection": "None",
+      "created": "31-08-2022",
+      "updated": "31-08-2022",
+      "id_no": "630ed86e2cbe562a65c27344",
+      "photo": ""
+    },
+    {
+      "name": "Ice Cream",
+      "id": 5,
+      "author": "harsh",
+      "category": "Gradient",
+      "views": 1509,
+      "downloads": 1003,
+      "resolution": "1440 * 2560",
+      "size": "1.4 mb",
+      "url": "OPEN IMAGE",
+      "collection": "None",
+      "created": "31-08-2022",
+      "updated": "31-08-2022",
+      "id_no": "630ed86e2cbe562a65c27344",
+      "photo": ""
+    },
+    {
+      "name": "Ice Cream",
+      "id": 6,
+      "author": "harsh",
+      "category": "Gradient",
+      "views": 1509,
+      "downloads": 1003,
+      "resolution": "1440 * 2560",
+      "size": "1.4 mb",
+      "url": "OPEN IMAGE",
+      "collection": "None",
+      "created": "31-08-2022",
+      "updated": "31-08-2022",
+      "id_no": "630ed86e2cbe562a65c27344"
+    },
+    {
+      "name": "Ice Cream",
+      "id": 7,
+      "author": "harsh",
+      "category": "Gradient",
+      "views": 1509,
+      "downloads": 1003,
+      "resolution": "1440 * 2560",
+      "size": "1.4 mb",
+      "url": "OPEN IMAGE",
+      "collection": "None",
+      "created": "31-08-2022",
+      "updated": "31-08-2022",
+      "id_no": "630ed86e2cbe562a65c27344"
+    },
+    {
+      "name": "Ice Cream",
+      "id": 8,
+      "author": "harsh",
+      "category": "Gradient",
+      "views": 1509,
+      "downloads": 1003,
+      "resolution": "1440 * 2560",
+      "size": "1.4 mb",
+      "url": "OPEN IMAGE",
+      "collection": "None",
+      "created": "31-08-2022",
+      "updated": "31-08-2022",
+      "id_no": "630ed86e2cbe562a65c27344"
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    }
+  ]
+}

@@ -1,0 +1,414 @@
+<app-logo></app-logo>
+<div class="css-8k9cwf">
+  <div class="MuiGrid-root css-rfnosa">
+    <button [routerLink]="['']" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-eux48v" tabindex="0" type="button">
+      <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowBackIosIcon">
+        <path d="M11.67 3.87 9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"></path>
+      </svg>
+      <span class="MuiTouchRipple-root css-w0pj6f"></span>
+    </button>
+    <div class="MuiGrid-root MuiGrid-container css-1d3bbye" style="justify-content: center;">
+      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-8pdr4s">
+        <div style="display: flex; justify-content: flex-start; align-items: flex-start;">
+          <div class="MuiGrid-root css-rfnosa" style="width: 100%; display: flex; justify-content: center; align-items: center;">
+            <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9" style="width: 320px; margin: 10px; background-color: rgb(187, 166, 181); color: rgb(255, 255, 255); border: none; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+            <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" type="button" tabindex="0">
+              <img src="{{url}}" class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-rhsghg" height="520" width="320" alt="wall">
+              <div class="MuiCardContent-root css-1qw96cp" style="height: 80px; display: flex; justify-content: space-between; align-items: center;">
+                <p class="MuiTypography-root MuiTypography-body1 css-16gzibi">{{displayName}}</p>
+              </div>
+              <span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span>
+              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; margin-top: -30px;">
+          <div data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: rgb(255, 92, 104); height: 50px; width: 50px; border-radius: 50px; display: flex; justify-content: center; align-items: center; border: 2px solid rgb(255, 255, 255);">
+            <svg data-bs-toggle="modal" data-bs-target="#exampleModal" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.25 4.5H15.75V3.375C15.75 2.87772 15.5525 2.40081 15.2008 2.04917C14.8492 1.69754 14.3723 1.5 13.875 1.5H10.125C9.62772 1.5 9.15081 1.69754 8.79917 2.04917C8.44754 2.40081 8.25 2.87772 8.25 3.375V4.5H3.75C3.55109 4.5 3.36032 4.57902 3.21967 4.71967C3.07902 4.86032 3 5.05109 3 5.25C3 5.44891 3.07902 5.63968 3.21967 5.78033C3.36032 5.92098 3.55109 6 3.75 6H4.54688L5.4375 20.2931C5.50406 21.5517 6.46875 22.5 7.6875 22.5H16.3125C17.5373 22.5 18.4828 21.5728 18.5625 20.2969L19.4531 6H20.25C20.4489 6 20.6397 5.92098 20.7803 5.78033C20.921 5.63968 21 5.44891 21 5.25C21 5.05109 20.921 4.86032 20.7803 4.71967C20.6397 4.57902 20.4489 4.5 20.25 4.5ZM9.02672 19.5H9C8.80563 19.5001 8.61881 19.4248 8.4789 19.2899C8.33899 19.1549 8.25692 18.971 8.25 18.7767L7.875 8.27672C7.86791 8.07781 7.94014 7.88423 8.07578 7.73856C8.21142 7.5929 8.39937 7.50709 8.59828 7.5C8.79719 7.49291 8.99077 7.56514 9.13644 7.70078C9.2821 7.83642 9.36791 8.02437 9.375 8.22328L9.75 18.7233C9.75357 18.8218 9.73769 18.92 9.70326 19.0124C9.66884 19.1048 9.61654 19.1894 9.54937 19.2616C9.48219 19.3337 9.40146 19.3919 9.31178 19.4328C9.2221 19.4737 9.12523 19.4966 9.02672 19.5ZM12.75 18.75C12.75 18.9489 12.671 19.1397 12.5303 19.2803C12.3897 19.421 12.1989 19.5 12 19.5C11.8011 19.5 11.6103 19.421 11.4697 19.2803C11.329 19.1397 11.25 18.9489 11.25 18.75V8.25C11.25 8.05109 11.329 7.86032 11.4697 7.71967C11.6103 7.57902 11.8011 7.5 12 7.5C12.1989 7.5 12.3897 7.57902 12.5303 7.71967C12.671 7.86032 12.75 8.05109 12.75 8.25V18.75ZM14.25 4.5H9.75V3.375C9.74943 3.3256 9.75875 3.27658 9.77739 3.23083C9.79604 3.18507 9.82364 3.14351 9.85857 3.10858C9.89351 3.07364 9.93507 3.04604 9.98083 3.02739C10.0266 3.00875 10.0756 2.99943 10.125 3H13.875C13.9244 2.99943 13.9734 3.00875 14.0192 3.02739C14.0649 3.04604 14.1065 3.07364 14.1414 3.10858C14.1764 3.14351 14.204 3.18507 14.2226 3.23083C14.2413 3.27658 14.2506 3.3256 14.25 3.375V4.5ZM15.75 18.7767C15.7431 18.971 15.661 19.1549 15.5211 19.2899C15.3812 19.4248 15.1944 19.5001 15 19.5H14.9728C14.8743 19.4965 14.7775 19.4736 14.6879 19.4327C14.5983 19.3917 14.5176 19.3335 14.4505 19.2614C14.3833 19.1893 14.3311 19.1046 14.2967 19.0123C14.2623 18.92 14.2464 18.8217 14.25 18.7233L14.625 8.22328C14.6285 8.12479 14.6514 8.02795 14.6923 7.9383C14.7332 7.84865 14.7914 7.76794 14.8636 7.70078C14.9357 7.63361 15.0203 7.58132 15.1127 7.54687C15.205 7.51242 15.3032 7.49649 15.4017 7.5C15.5002 7.50351 15.597 7.52638 15.6867 7.56732C15.7763 7.60825 15.8571 7.66644 15.9242 7.73856C15.9914 7.81069 16.0437 7.89534 16.0781 7.98767C16.1126 8.08001 16.1285 8.17823 16.125 8.27672L15.75 18.7767Z" fill="#FEFEFF"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-md-6 css-8pdr4s" style="margin-top: 20px; padding: 30px; background: rgb(24, 39, 58); display: flex; flex-direction: column; border-radius: 8px;">
+        <div *ngIf="editbuttonclicked">
+        <div style="display: flex; justify-content: flex-end; margin-top: -50px;">
+          <div [routerLink]="['/admin/postDetail/', _id]" (click)="editButton()" style="background-color: rgb(255, 92, 104); height: 50px; width: 50px; border-radius: 50px; display: flex; justify-content: center; align-items: center; border: 2px solid rgb(255, 255, 255); color: rgb(255, 255, 255);">
+            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="EditIcon">
+              <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"></path>
+            </svg>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Author: </span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">Admin</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Category:</span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh"> {{category}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Views: </span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">{{views}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Downloads:</span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">{{downloads}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Resolution:</span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">{{resolution}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Size:</span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">{{size}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">URL:</span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">
+            <a href="{{url}}" target="_blank" rel="noreferrer" style="color: rgb(255, 255, 255); text-decoration: none;">OPEN IMAGE</a>
+          </p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">isPremium:</span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">{{isPremium}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Collection:</span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">None</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Created:</span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">{{createdAt}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">UpdatedAt:</span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">{{updatedAt}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">_id: </span>
+          <p class="MuiTypography-root MuiTypography-body1 css-16fqioh" style="font-size: 10px;">{{_id}}</p>
+        </div>
+      </div>
+        <!-- form -->
+        <div *ngIf="!editbuttonclicked">
+          <form #updateWallpaper="ngForm">
+            <div style="display: flex; justify-content: space-evenly; margin-top: -50px; margin-bottom: 20px;">
+              <button [routerLink]="['']" (click)="onSubmit(updateWallpaper)" class="MuiLoadingButton-root MuiButton-root MuiButton-text MuiButton-textInfo MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-5q3ooc" tabindex="0" type="button" id="mui-44" style="background-color: rgb(43, 180, 114); height: 50px; width: 50px; min-width: 50px; border-radius: 50px; display: flex; justify-content: center; align-items: center; border: 2px solid rgb(255, 255, 255); color: rgb(255, 255, 255);">
+                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CheckIcon">
+                  <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+                <span class="MuiTouchRipple-root css-w0pj6f"></span>
+              </button>
+              <div [routerLink]="['/admin/postDetail/', _id]" (click)="cancel()" style="background-color: rgb(255, 92, 104); height: 50px; width: 50px; border-radius: 50px; display: flex; justify-content: center; align-items: center; border: 2px solid rgb(255, 255, 255); color: rgb(255, 255, 255);">
+                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CloseIcon">
+                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                </svg>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Name :</span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+                  <input aria-invalid="false" id="displayName" name="displayName" placeholder="Anime" type="text" maxlength="50" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" [(ngModel)]="displayName">
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac" style="display: none;">
+                    <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <!-- author -->
+            <div style="display: flex; align-items: center;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Author: </span>
+              <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">Admin</p>
+            </div>
+            <!-- <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Auther:</span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+                  <input aria-invalid="false" id="auther" name="auther" placeholder="Nature" type="text" maxlength="50" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" [(ngModel)]="author">
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac"><legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div> -->
+            <div style="display: flex; align-items: center;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Category:</span>
+              <p class="MuiTypography-root MuiTypography-body1 css-16fqioh"> {{category}}</p>
+            </div>
+            <!-- <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Category:</span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+                  <input aria-invalid="false" id="category" name="category" placeholder="Nature" type="text" maxlength="50" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" [(ngModel)]="category">
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac"><legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div> -->
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Views: </span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+                  <input aria-invalid="false" name="views" placeholder="eg. 0" required="" type="number" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" [(ngModel)]="views" id="mui-45">
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac" style="display: none;"><legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Downloads:</span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+                  <input aria-invalid="false" name="downloads" placeholder="eg. 0" required="" type="number" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" [(ngModel)]="downloads" id="mui-46">
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac" style="display: none;"><legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Resolution:</span>
+              <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">{{resolution}}</p>
+            </div>
+            <!-- <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Resolution:</span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+                  <input aria-invalid="false" id="resolution" name="resolution" placeholder="1800x3600" type="text" maxlength="50" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" [(ngModel)]="resolution">
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac"><legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div> -->
+            <div style="display: flex; align-items: center;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Size:</span>
+              <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">{{size}}</p>
+            </div>
+            <!-- <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Size:</span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+                  <input aria-invalid="false" id="size" name="size" placeholder="1 MB" type="text" maxlength="50" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" [(ngModel)]="size">
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac"><legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div> -->
+            <div style="display: flex; align-items: center;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">URL:</span>
+              <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">
+                <a href="{{url}}" target="_blank" rel="noreferrer" style="color: rgb(255, 255, 255); text-decoration: none;">OPEN IMAGE</a>
+              </p>
+            </div>
+            <!-- <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">URL:</span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+                  <input aria-invalid="false" type="text" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" value="https://wallpaper-stack-app.s3.amazonaws.com/Wallpaper/69444283-3ac5-430a-916b-95cf2c3a4294-Ice%20cream%20Mountain_7291.jpeg" id="mui-47">
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac"><legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div> -->
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">isPremium:</span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0" style="border: 1px solid #fff; margin-left: 7px; width: 180px; display: flex; align-items: center;">
+                  <label class="radio-inline" style="display: flex; max-width: 60px;">
+                    <input type="radio" name="isPremium" value="true" [(ngModel)]="isPremium" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" style="display: flex; width: auto; margin: 0 5px;">true</label>
+                  <label class="radio-inline" style="display: flex; max-width: 60px;">
+                    <input type="radio" name="isPremium" value="false" [(ngModel)]="isPremium" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" style="display: flex; width: auto; margin: 0 5px;">false</label>
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac" style="display: none;"><legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Collection:</span>
+              <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">None</p>
+            </div>
+            <!-- <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Collection:</span>
+              <div class="MuiFormControl-root MuiTextField-root css-kgp0ar">
+                <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+                  <input aria-invalid="false" id="collections" name="collections" placeholder="Nature" type="text" maxlength="50" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" [(ngModel)]="collection">
+                  <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac"><legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+                  </fieldset>
+                </div>
+              </div>
+            </div> -->
+            <div style="display: flex; align-items: center; margin-top: 10px;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">Created:</span>
+              <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">04-09-2022</p>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">UpdatedAt:</span>
+              <p class="MuiTypography-root MuiTypography-body1 css-16fqioh">06-09-2022</p>
+            </div>
+            <div style="display: flex; align-items: center;">
+              <span class="MuiTypography-root MuiTypography-metadata css-wxn8yu">_id: </span>
+              <p class="MuiTypography-root MuiTypography-body1 css-16fqioh" style="font-size: 10px;">{{_id}}</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">title</h5>
+        <img class="card-img-top" src="..." alt="Card image cap">
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item align">{{author}}</li>
+      </ul>
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><i width="10%" height="90%" class="deleteImg fa fa-trash"></i></a>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <div class="card form-card"
+      style="display: flex; justify-content: flex-end; margin-top: 90px; background: rgb(24, 39, 58); display: flex; flex-direction: column; border-radius: 8px;">
+      <div class="card-body">
+        <a [routerLink]="['/postDetail', id]" (click)="editButton()"><img src="/assets/img/edit_icon.png"
+            class="css-vubbuv" id="image"></a>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Author: </span>
+          <p class="css-16fqioh">{{author}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Category: </span>
+          <p class="css-16fqioh">{{category}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Views: </span>
+          <p class="css-16fqioh">{{views}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Downloads: </span>
+          <p class="css-16fqioh">{{downloads}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Resolution: </span>
+          <p class="css-16fqioh">{{resolution}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Size: </span>
+          <p class="css-16fqioh">{{size}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Url: </span>
+          <p class="css-16fqioh">{{url}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Collection: </span>
+          <p class="css-16fqioh">{{collection}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Created: </span>
+          <p class="css-16fqioh">{{created}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">Updated: </span>
+          <p class="css-16fqioh">{{updated}}</p>
+        </div>
+        <div style="display: flex; align-items: center;">
+          <span class="css-wxn8yu">_id: </span>
+          <p class="css-16fqioh">{{id_no}}</p>
+        </div>
+      </div>
+      <div *ngIf="!editbuttonclicked">
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()" style="padding-top: 500px;">
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">Author:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="author" [(ngModel)]="author">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">Category:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="category" [(ngModel)]="category">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">Views:</label>
+              <div class="col-sm-6">
+                <input type="number" class="form-control" name="views" [(ngModel)]="views">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">Downloads:</label>
+              <div class="col-sm-6">
+                <input type="number" class="form-control" name="downloads" [(ngModel)]="downloads">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">Resolution:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="resolution" [(ngModel)]="category">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">Size:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="size" [(ngModel)]="size">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">Url:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="url" [(ngModel)]="url">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu css-wxn8yu">Collection:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="collection" [(ngModel)]="collection">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">Created:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="created" [(ngModel)]="created">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">Updated:</label>
+              <div class="col-sm-6">
+                <input type="text" class="form-control" name="updated" [(ngModel)]="updated">
+              </div>
+            </div>
+            <div class="form-group row align-items-center">
+              <label class="col-sm-2 col-form-label css-wxn8yu">_id:</label>
+              <div class="col-sm-6">
+                <input type="string" class="form-control" name="id_no" [(ngModel)]="id_no">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top: 5px;">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body pt-5">
+        <p>Are you sure you want to delete this wallpaper?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Discard</button>
+        <button type="button" class="btn btn-primary" (click)="onDelete(route_id)" [routerLink]="['/']" data-bs-dismiss="modal">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>

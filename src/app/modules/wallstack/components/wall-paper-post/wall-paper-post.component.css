@@ -1,0 +1,115 @@
+/* .card {
+  width: 143px;
+  height: 217px;
+  margin-top: 20px;
+} */
+
+.css-1d3bbye {
+  box-sizing: border-box;
+  /* display: flex; */
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+/* @media (min-width: 1200px) */
+.css-h72y0n {
+  flex-basis: 12.5%;
+  -moz-box-flex: 0;
+  flex-grow: 0;
+  max-width: 12.5%;
+}
+
+.css-h72y0n {
+  box-sizing: border-box;
+  margin: 0px;
+  flex-direction: row;
+  flex-basis: 0%;
+  -moz-box-flex: 0;
+  flex-grow: 0;
+  max-width: 50%;
+  width: 163px;
+}
+
+.css-nmqra9 {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  overflow: hidden;
+  background: rgb(254, 254, 255) none repeat scroll 0% 0%;
+    background-color: rgb(254, 254, 255);
+  border: 1px solid rgb(232, 235, 239);
+  box-sizing: border-box;
+  box-shadow: rgba(28, 48, 74, 0.08) 0px 1px 18px -1px;
+  border-radius: 8px;
+}
+
+.css-1jluznr {
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: currentcolor none 0px;
+  border: 0px none;
+  margin: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  text-align: inherit;
+  width: 100%;
+}
+
+.css-pqdqbj {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s,-webkit-filter .3s;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded > img {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+.css-1xroguk {
+  margin: 0px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+.css-jo3ec3 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  inset: 0px;
+  border-radius: inherit;
+  opacity: 0;
+  background-color: currentcolor;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.css-w0pj6f {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  inset: 0px;
+  border-radius: inherit;
+}

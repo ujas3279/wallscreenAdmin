@@ -1,0 +1,113 @@
+/* .topnav a {
+  text-decoration: underline;
+  border-bottom: 1px solid rgb(232, 235, 239);
+}
+
+.topnav a:hover {
+  border-bottom: 2px solid red;
+}
+
+.topnav a.active {
+  border-bottom: 2px solid red;
+}
+
+.topnav {
+  margin-bottom: 10px;
+} */
+
+.css-6ddyva {
+  overflow: hidden;
+  min-height: 48px;
+  display: flex;
+}
+
+.css-6ddyva .MuiTabs-scroller {
+  border-bottom: 1px solid rgb(232, 235, 239);
+}
+
+.css-1anid1y {
+  position: relative;
+  display: inline-block;
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.css-6ddyva .MuiTab-root.MuiButtonBase-root {
+  margin-right: 15px;
+  padding: 0px;
+  min-width: 0px;
+}
+
+.css-16j456z.Mui-selected {
+  color: rgb(255, 44, 55);
+}
+
+.css-16j456z {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  border-radius: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  max-width: none;
+  min-width: 90px;
+  position: relative;
+  min-height: 48px;
+  flex: 1 1 0px;
+  padding: 12px 16px;
+  overflow: hidden;
+  white-space: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-box-flex: 1;
+}
+
+.css-vubbuv {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.css-w0pj6f {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  inset: 0px;
+  border-radius: inherit;
+}
+
+.css-6ddyva .MuiTabs-indicator {
+  border-radius: 2px 2px 0px 0px;
+}
+
+.css-8k9cwf {
+  margin: 0px 20px 20px;
+}
+
+.css-k008qs {
+  display: flex;
+}

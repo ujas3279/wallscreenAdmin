@@ -1,0 +1,116 @@
+.css-33nxnt {
+  display: flex;
+  width: 100%;
+  min-height: 93px;
+  padding: 16px 23px;
+}
+
+.css-lx0d1u {
+  display: flex;
+  width: 50%;
+  margin: 0px 8px;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.css-h7g6tj {
+  margin: 0px;
+  font-size: 24px;
+  color: rgb(15, 21, 29);
+  font-weight: bold;
+  font-family: Inter-Bold;
+}
+
+.css-lx0d1u .MuiTypography-metadata {
+  margin-top: 4px;
+  color: rgba(28, 46, 69, 0.6);
+}
+
+.css-gidppy {
+  margin: 0px;
+  font-size: 12px;
+  color: rgba(27, 43, 65, 0.72);
+  font-weight: normal;
+  font-family: Inter;
+}
+
+.css-1ofnr7z {
+  display: flex;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 50%;
+}
+
+.css-pcf5ie.MuiButton-sizeMedium {
+  height: 40.5px;
+  font-size: 0.938rem;
+}
+
+.css-pcf5ie {
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  text-transform: none;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  border-radius: 4px;
+  color: rgb(7, 115, 242);
+  box-shadow: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  padding: 8px;
+  margin: 0px 6px;
+  min-width: 35px;
+  border: 1px solid rgb(232, 235, 239);
+  max-height: 36px;
+}
+
+.css-pcf5ie .MuiButton-startIcon {
+  margin: 0px;
+}
+
+.css-1l6c7y9 {
+  display: inherit;
+  margin-right: 8px;
+  margin-left: -4px;
+}
+
+.css-1l6c7y9 > :nth-of-type(1) {
+  font-size: 20px;
+}
+
+.css-vubbuv {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+}
+
+.css-w0pj6f {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  inset: 0px;
+  border-radius: inherit;
+}

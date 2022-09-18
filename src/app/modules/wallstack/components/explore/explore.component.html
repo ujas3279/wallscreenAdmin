@@ -1,0 +1,86 @@
+<app-logo></app-logo>
+<app-header></app-header>
+<div role="tabpanel" aria-labelledby="undefined-tab-0" id="undefined-tabpanel-0" content="[object Object]" class="css-0" hidden="">
+</div>
+<div role="tabpanel" aria-labelledby="undefined-tab-1" id="undefined-tabpanel-1" class="css-0">
+  <div class="MuiGrid-root MuiGrid-container css-1d3bbye"
+    style="display: flex; justify-content: center; flex-direction: column; align-items: center; margin-top: 20px;">
+    <div style="margin-top: 40px; width: 80%;">
+      <div class="MuiDivider-root MuiDivider-fullWidth MuiDivider-flexItem MuiDivider-withChildren css-w335bo"
+        role="separator">
+        <span class="MuiDivider-wrapper css-c1ovea">
+          <p class="MuiTypography-root MuiTypography-body1 css-16gzibi" style="text-transform: capitalize;">popular</p>
+        </span>
+      </div>
+      <div class="MuiGrid-root MuiGrid-container css-1d3bbye">
+        <div *ngFor="let popularBanner of popularBanners" class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-19egsyp"
+          style="display: flex; justify-content: center; align-items: center;">
+          <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+            style="width: 310px; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); border: none; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+            <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+              <img class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-rhsghg"
+                src="{{popularBanner.url}}"
+                height="234" width="312" alt="item">
+              <div class="MuiCardContent-root css-1qw96cp" style="display: flex; align-items: center;">
+                <!-- <p class="MuiTypography-root MuiTypography-body2 css-1xroguk" style="margin-right: 10px;">1.</p> -->
+                <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">{{popularBanner.category.categoryName}}</p>
+              </div>
+              <span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span>
+              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px; width: 80%;">
+      <div class="MuiDivider-root MuiDivider-fullWidth MuiDivider-flexItem MuiDivider-withChildren css-w335bo"
+        role="separator"><span class="MuiDivider-wrapper css-c1ovea">
+          <p class="MuiTypography-root MuiTypography-body1 css-16gzibi" style="text-transform: capitalize;">trending</p>
+        </span>
+      </div>
+      <div class="MuiGrid-root MuiGrid-container css-1d3bbye">
+        <div *ngFor="let trendingBanner of trendingBanners" class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-19egsyp"
+          style="display: flex; justify-content: center; align-items: center;">
+          <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+            style="width: 310px; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); border: none; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+            <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button"><img
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-rhsghg"
+                src="{{trendingBanner.url}}"
+                height="234" width="312" alt="item">
+              <div class="MuiCardContent-root css-1qw96cp" style="display: flex; align-items: center;">
+                <!-- <p class="MuiTypography-root MuiTypography-body2 css-1xroguk" style="margin-right: 10px;">1.</p> -->
+                <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">{{trendingBanner.category.categoryName}}</p>
+              </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+                class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top: 40px; width: 80%;">
+      <div class="MuiDivider-root MuiDivider-fullWidth MuiDivider-flexItem MuiDivider-withChildren css-w335bo"
+        role="separator"><span class="MuiDivider-wrapper css-c1ovea">
+          <p class="MuiTypography-root MuiTypography-body1 css-16gzibi" style="text-transform: capitalize;">new</p>
+        </span></div>
+      <div class="MuiGrid-root MuiGrid-container css-1d3bbye">
+        <div *ngFor="let newBanner of newBanners" class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-19egsyp"
+          style="display: flex; justify-content: center; align-items: center;">
+          <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+            style="width: 310px; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); border: none; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+            <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button"><img
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-rhsghg"
+                src="{{newBanner.url}}"
+                height="234" width="312" alt="item">
+              <div class="MuiCardContent-root css-1qw96cp" style="display: flex; align-items: center;">
+                <!-- <p class="MuiTypography-root MuiTypography-body2 css-1xroguk" style="margin-right: 10px;">1.</p> -->
+                <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">{{newBanner.category.categoryName}}</p>
+              </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+                class="MuiTouchRipple-root css-w0pj6f"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

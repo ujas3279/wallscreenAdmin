@@ -1,0 +1,248 @@
+<app-logo></app-logo>
+<app-header></app-header>
+<div role="tabpanel" aria-labelledby="undefined-tab-0" id="undefined-tabpanel-0" content="[object Object]" class="css-0" hidden=""></div>
+<div role="tabpanel" aria-labelledby="undefined-tab-1" id="undefined-tabpanel-1" content="[object Object]" class="css-0" hidden=""></div>
+<div role="tabpanel" aria-labelledby="undefined-tab-2" id="undefined-tabpanel-2" content="[object Object]" class="css-0" hidden=""></div>
+
+<div role="tabpanel" aria-labelledby="undefined-tab-3" id="undefined-tabpanel-3" content="[object Object]"
+  class="css-0">
+  <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <span *ngIf="selectType==0"
+      class="MuiTypography-root MuiTypography-heading3 css-h7g6tj" style="margin-top: 20px;">Add New Wallpaper</span>
+      <span *ngIf="selectType==1"
+      class="MuiTypography-root MuiTypography-heading3 css-h7g6tj" style="margin-top: 20px;">Change Banner</span>
+      <span *ngIf="selectType==2"
+      class="MuiTypography-root MuiTypography-heading3 css-h7g6tj" style="margin-top: 20px;">Change Category</span>
+    <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary css-ec37jo" style="margin: 20px;">
+      <!-- <div tabindex="0" role="button" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="select_icons_type"
+        id="select_icons_type"
+        class="MuiSelect-select MuiSelect-outlined MuiOutlinedInput-input MuiInputBase-input css-6mslav">
+        <p class="MuiTypography-root MuiTypography-body1 css-16gzibi">Wallpaper</p>
+      </div> -->
+      <select class="form-select" (change)="onSelected()" #teams>
+        <option selected>Wallpaper</option>
+        <option>Banner</option>
+        <option>Category</option>
+      </select>
+      <input aria-hidden="true" tabindex="-1" class="MuiSelect-nativeInput css-1k3x8v3" value="wallpaper"><svg
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-m9m7cd"
+        focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="ArrowDropDownIcon">
+        <path d="M7 10l5 5 5-5z"></path>
+      </svg>
+      <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+        <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+      </fieldset>
+    </div>
+    <!-- wallpaper -->
+    <form *ngIf="selectType==0" style="width: 100%; display: flex; flex-direction: column; align-items: center;" #wallPaperForm="ngForm" (ngSubmit)="onSubmitWallpaper(wallPaperForm)">
+      <div style="width: 80%; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <div style="width: 200px; height: 360px; background-color: rgb(242, 242, 242); border-radius: 12px; margin: 8px; display: flex; justify-content: center; align-items: center; border: 2px solid; position: relative;">
+          <input name="walls" (change)="onSelectWallpaperFile($event)" type="file" accept="image/*" style="height: 100%; opacity: 0; position: absolute; left: 0; right: 0; bottom: 0; top: 0;">
+          <svg *ngIf="uploadFileWallpaper" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true"
+            viewBox="0 0 24 24" data-testid="AddIcon" style="color: rgb(15, 21, 29);">
+            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+          </svg>
+          <img *ngIf="!uploadFileWallpaper" [src]="wallpaperUrl" style="border-radius: 8px;" width="200px" height="360px" #photo/>
+        </div>
+        <p *ngIf="uploadFileWallpaper" class="MuiTypography-root MuiTypography-body1 css-16gzibi" style="font-size: 12px; line-height: 18px; font-weight: 300; color: rgb(109, 109, 109); text-align: center;">
+          Upload Wallpaper</p>
+
+        <div *ngIf="!uploadFileWallpaper">
+          <div (click)="resetImgCardWallpaper()" style="background-color: rgb(255, 92, 104); height: 50px; width: 50px; border-radius: 50px; display: flex; justify-content: center; align-items: center;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.25 4.5H15.75V3.375C15.75 2.87772 15.5525 2.40081 15.2008 2.04917C14.8492 1.69754 14.3723 1.5 13.875 1.5H10.125C9.62772 1.5 9.15081 1.69754 8.79917 2.04917C8.44754 2.40081 8.25 2.87772 8.25 3.375V4.5H3.75C3.55109 4.5 3.36032 4.57902 3.21967 4.71967C3.07902 4.86032 3 5.05109 3 5.25C3 5.44891 3.07902 5.63968 3.21967 5.78033C3.36032 5.92098 3.55109 6 3.75 6H4.54688L5.4375 20.2931C5.50406 21.5517 6.46875 22.5 7.6875 22.5H16.3125C17.5373 22.5 18.4828 21.5728 18.5625 20.2969L19.4531 6H20.25C20.4489 6 20.6397 5.92098 20.7803 5.78033C20.921 5.63968 21 5.44891 21 5.25C21 5.05109 20.921 4.86032 20.7803 4.71967C20.6397 4.57902 20.4489 4.5 20.25 4.5ZM9.02672 19.5H9C8.80563 19.5001 8.61881 19.4248 8.4789 19.2899C8.33899 19.1549 8.25692 18.971 8.25 18.7767L7.875 8.27672C7.86791 8.07781 7.94014 7.88423 8.07578 7.73856C8.21142 7.5929 8.39937 7.50709 8.59828 7.5C8.79719 7.49291 8.99077 7.56514 9.13644 7.70078C9.2821 7.83642 9.36791 8.02437 9.375 8.22328L9.75 18.7233C9.75357 18.8218 9.73769 18.92 9.70326 19.0124C9.66884 19.1048 9.61654 19.1894 9.54937 19.2616C9.48219 19.3337 9.40146 19.3919 9.31178 19.4328C9.2221 19.4737 9.12523 19.4966 9.02672 19.5ZM12.75 18.75C12.75 18.9489 12.671 19.1397 12.5303 19.2803C12.3897 19.421 12.1989 19.5 12 19.5C11.8011 19.5 11.6103 19.421 11.4697 19.2803C11.329 19.1397 11.25 18.9489 11.25 18.75V8.25C11.25 8.05109 11.329 7.86032 11.4697 7.71967C11.6103 7.57902 11.8011 7.5 12 7.5C12.1989 7.5 12.3897 7.57902 12.5303 7.71967C12.671 7.86032 12.75 8.05109 12.75 8.25V18.75ZM14.25 4.5H9.75V3.375C9.74943 3.3256 9.75875 3.27658 9.77739 3.23083C9.79604 3.18507 9.82364 3.14351 9.85857 3.10858C9.89351 3.07364 9.93507 3.04604 9.98083 3.02739C10.0266 3.00875 10.0756 2.99943 10.125 3H13.875C13.9244 2.99943 13.9734 3.00875 14.0192 3.02739C14.0649 3.04604 14.1065 3.07364 14.1414 3.10858C14.1764 3.14351 14.204 3.18507 14.2226 3.23083C14.2413 3.27658 14.2506 3.3256 14.25 3.375V4.5ZM15.75 18.7767C15.7431 18.971 15.661 19.1549 15.5211 19.2899C15.3812 19.4248 15.1944 19.5001 15 19.5H14.9728C14.8743 19.4965 14.7775 19.4736 14.6879 19.4327C14.5983 19.3917 14.5176 19.3335 14.4505 19.2614C14.3833 19.1893 14.3311 19.1046 14.2967 19.0123C14.2623 18.92 14.2464 18.8217 14.25 18.7233L14.625 8.22328C14.6285 8.12479 14.6514 8.02795 14.6923 7.9383C14.7332 7.84865 14.7914 7.76794 14.8636 7.70078C14.9357 7.63361 15.0203 7.58132 15.1127 7.54687C15.205 7.51242 15.3032 7.49649 15.4017 7.5C15.5002 7.50351 15.597 7.52638 15.6867 7.56732C15.7763 7.60825 15.8571 7.66644 15.9242 7.73856C15.9914 7.81069 16.0437 7.89534 16.0781 7.98767C16.1126 8.08001 16.1285 8.17823 16.125 8.27672L15.75 18.7767Z" fill="#FEFEFF"></path>
+            </svg>
+          </div>
+        </div>
+        <div class="MuiFormControl-root MuiFormControl-fullWidth css-xa8qgh"><label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-1r2429a"
+            data-shrink="true" for="displayName-walls">Display name:<span class="css-1hu9301">*</span></label>
+          <div class="MuiFormControl-root MuiTextField-root css-174xox1">
+            <div
+              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+              <input aria-invalid="false" autocomplete="off" id="displayName-walls" name="displayName"
+                placeholder="Anime" type="text" maxlength="50"
+                class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" value="" required [(ngModel)]="displayName">
+              <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+                <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+              </fieldset>
+            </div>
+          </div>
+          <div class="css-0"></div>
+        </div>
+        <div style="width: 100%; margin-top: 20px;">
+          <span class="MuiTypography-root MuiTypography-metadata css-gidppy">Category:<span style="color: red;">*</span></span>
+          <div required="" class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth css-aj8fw6" style="margin-top: 5px;">
+            <select class="form-select" required [(ngModel)]="category" name="category">
+              <option *ngFor="let category of allcategories" value="{{category._id}}" selected>{{category.categoryName}}</option>
+            </select>
+          </div>
+        </div>
+        <div style="width: 100%; margin-top: 20px;">
+          <span class="MuiTypography-root MuiTypography-metadata css-gidppy">isPremium:<span style="color: red;">*</span></span>
+          <div required="" class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth css-aj8fw6" style="margin-top: 5px;">
+            <select class="form-select" required [(ngModel)]="isPremium" name="isPremium">
+              <option selected>true</option>
+              <option>false</option>
+            </select>
+          </div>
+        </div>
+        <!-- <div class="MuiFormControl-root MuiFormControl-fullWidth css-xa8qgh"><label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-1r2429a"
+            data-shrink="true" for="auther-walls">Auther:<span class="css-1hu9301">*</span></label>
+          <div class="MuiFormControl-root MuiTextField-root css-174xox1">
+            <div
+              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+              <input aria-invalid="false" id="auther-walls" name="auther" placeholder="Admin" type="text" maxlength="50"
+                class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" value="" required [(ngModel)]="auther">
+              <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+                <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+              </fieldset>
+            </div>
+          </div>
+          <div class="css-0"></div>
+        </div> -->
+
+        <div class="MuiFormControl-root MuiFormControl-fullWidth css-xa8qgh"><label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-1r2429a"
+            data-shrink="true">Downloads:<span class="css-1hu9301">*</span></label>
+          <div class="MuiFormControl-root MuiTextField-root css-174xox1">
+            <div
+              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+              <input aria-invalid="false" name="downloads" placeholder="eg. 0" type="number"
+                class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" value="" id="mui-12" required [(ngModel)]="downloads">
+              <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+                <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+              </fieldset>
+            </div>
+          </div>
+          <div class="css-0"></div>
+        </div>
+        <div class="MuiFormControl-root MuiFormControl-fullWidth css-xa8qgh"><label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-1r2429a"
+            data-shrink="true">Views:<span class="css-1hu9301">*</span></label>
+          <div class="MuiFormControl-root MuiTextField-root css-174xox1">
+            <div
+              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+              <input aria-invalid="false" name="views" placeholder="eg. 0" type="number"
+                class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" value="" id="mui-13" required [(ngModel)]="views">
+              <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+                <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+              </fieldset>
+            </div>
+          </div>
+          <div class="css-0"></div>
+        </div>
+        <!-- <div class="MuiFormControl-root MuiFormControl-fullWidth css-xa8qgh">
+          <label
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-1r2429a"
+            data-shrink="true" for="collections-walls">Collections:</label>
+          <div class="MuiFormControl-root MuiTextField-root css-174xox1">
+            <div
+              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+              <input aria-invalid="false" id="collections-walls" name="collections" placeholder="Nature" type="text"
+                maxlength="50" class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" value="" [(ngModel)]="collections">
+              <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+                <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+              </fieldset>
+            </div>
+          </div>
+          <div class="css-0"></div>
+        </div> -->
+      </div>
+      <div style="margin: 20px;">
+        <button [disabled]="!(wallPaperForm.form.valid && !uploadFileWallpaper)"
+          class="btn btn-primary"
+          type="submit" id="mui-14">Upload Wallpaper</button>
+        </div>
+    </form>
+    <!-- banner -->
+    <form *ngIf="selectType==1" style="width: 100%; display: flex; flex-direction: column; align-items: center;" #bannerForm="ngForm" (ngSubmit)="onSubmitbanner(bannerForm)">
+      <div style="width: 80%; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+          <div class="MuiGrid-root css-rfnosa">
+            <div class="MuiGrid-root css-rfnosa" style="height: 150px; width: 350px; display: flex; justify-content: center; align-items: center; background-color: rgb(242, 242, 242); border-radius: 12px; margin: 8px; border: 2px solid; position: relative;">
+              <input name="banner" (change)="onSelectBannerFile($event)" type="file" accept="image/*" style="position: absolute; height: 148px; left: 0; right: 0; bottom: 0; top: 0; opacity: 0;">
+              <svg *ngIf="uploadFileBanner" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true"
+                viewBox="0 0 24 24" data-testid="AddIcon" style="color: rgb(15, 21, 29);">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+              </svg>
+              <img *ngIf="!uploadFileBanner" [src]="bannerUrl" style="border-radius: 12px;" width="350px" height="150px"/>
+            </div>
+            <p *ngIf="uploadFileBanner" class="MuiTypography-root MuiTypography-body1 css-16gzibi" style="font-size: 12px; line-height: 18px; font-weight: 300; color: rgb(109, 109, 109); text-align: center;">
+              Upload Banner</p>
+              <div *ngIf="!uploadFileBanner">
+                <div (click)="resetImgCardBanner()" style="background-color: rgb(255, 92, 104); height: 50px; width: 50px; border-radius: 50px; display: flex; justify-content: center; align-items: center; margin: auto;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.25 4.5H15.75V3.375C15.75 2.87772 15.5525 2.40081 15.2008 2.04917C14.8492 1.69754 14.3723 1.5 13.875 1.5H10.125C9.62772 1.5 9.15081 1.69754 8.79917 2.04917C8.44754 2.40081 8.25 2.87772 8.25 3.375V4.5H3.75C3.55109 4.5 3.36032 4.57902 3.21967 4.71967C3.07902 4.86032 3 5.05109 3 5.25C3 5.44891 3.07902 5.63968 3.21967 5.78033C3.36032 5.92098 3.55109 6 3.75 6H4.54688L5.4375 20.2931C5.50406 21.5517 6.46875 22.5 7.6875 22.5H16.3125C17.5373 22.5 18.4828 21.5728 18.5625 20.2969L19.4531 6H20.25C20.4489 6 20.6397 5.92098 20.7803 5.78033C20.921 5.63968 21 5.44891 21 5.25C21 5.05109 20.921 4.86032 20.7803 4.71967C20.6397 4.57902 20.4489 4.5 20.25 4.5ZM9.02672 19.5H9C8.80563 19.5001 8.61881 19.4248 8.4789 19.2899C8.33899 19.1549 8.25692 18.971 8.25 18.7767L7.875 8.27672C7.86791 8.07781 7.94014 7.88423 8.07578 7.73856C8.21142 7.5929 8.39937 7.50709 8.59828 7.5C8.79719 7.49291 8.99077 7.56514 9.13644 7.70078C9.2821 7.83642 9.36791 8.02437 9.375 8.22328L9.75 18.7233C9.75357 18.8218 9.73769 18.92 9.70326 19.0124C9.66884 19.1048 9.61654 19.1894 9.54937 19.2616C9.48219 19.3337 9.40146 19.3919 9.31178 19.4328C9.2221 19.4737 9.12523 19.4966 9.02672 19.5ZM12.75 18.75C12.75 18.9489 12.671 19.1397 12.5303 19.2803C12.3897 19.421 12.1989 19.5 12 19.5C11.8011 19.5 11.6103 19.421 11.4697 19.2803C11.329 19.1397 11.25 18.9489 11.25 18.75V8.25C11.25 8.05109 11.329 7.86032 11.4697 7.71967C11.6103 7.57902 11.8011 7.5 12 7.5C12.1989 7.5 12.3897 7.57902 12.5303 7.71967C12.671 7.86032 12.75 8.05109 12.75 8.25V18.75ZM14.25 4.5H9.75V3.375C9.74943 3.3256 9.75875 3.27658 9.77739 3.23083C9.79604 3.18507 9.82364 3.14351 9.85857 3.10858C9.89351 3.07364 9.93507 3.04604 9.98083 3.02739C10.0266 3.00875 10.0756 2.99943 10.125 3H13.875C13.9244 2.99943 13.9734 3.00875 14.0192 3.02739C14.0649 3.04604 14.1065 3.07364 14.1414 3.10858C14.1764 3.14351 14.204 3.18507 14.2226 3.23083C14.2413 3.27658 14.2506 3.3256 14.25 3.375V4.5ZM15.75 18.7767C15.7431 18.971 15.661 19.1549 15.5211 19.2899C15.3812 19.4248 15.1944 19.5001 15 19.5H14.9728C14.8743 19.4965 14.7775 19.4736 14.6879 19.4327C14.5983 19.3917 14.5176 19.3335 14.4505 19.2614C14.3833 19.1893 14.3311 19.1046 14.2967 19.0123C14.2623 18.92 14.2464 18.8217 14.25 18.7233L14.625 8.22328C14.6285 8.12479 14.6514 8.02795 14.6923 7.9383C14.7332 7.84865 14.7914 7.76794 14.8636 7.70078C14.9357 7.63361 15.0203 7.58132 15.1127 7.54687C15.205 7.51242 15.3032 7.49649 15.4017 7.5C15.5002 7.50351 15.597 7.52638 15.6867 7.56732C15.7763 7.60825 15.8571 7.66644 15.9242 7.73856C15.9914 7.81069 16.0437 7.89534 16.0781 7.98767C16.1126 8.08001 16.1285 8.17823 16.125 8.27672L15.75 18.7767Z" fill="#FEFEFF"></path>
+                  </svg>
+                </div>
+              </div>
+          </div>
+        <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary css-ec37jo" style="margin-top: 20px;">
+          <select class="form-select" (change)="onBannerSelected()" #bannerteams [(ngModel)]="type" name="type">
+            <option selected>Popular</option>
+            <option>Trending</option>
+            <option>New</option>
+          </select>
+        </div>
+        <div style="width: 100%; margin-top: 20px;">
+          <span
+            class="MuiTypography-root MuiTypography-metadata css-gidppy">Category:<span style="color: red;">*</span></span>
+          <div required=""
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth css-aj8fw6"
+            style="margin-top: 5px;">
+            <select class="form-select" required [(ngModel)]="category" name="category">
+              <option *ngFor="let category of allcategories" value="{{category._id}}" selected>{{category.categoryName}}</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div style="margin: 20px;">
+        <button class="btn btn-primary"
+          type="submit" [disabled]="!(bannerForm.form.valid && !uploadFileBanner)">Upload Banner</button></div>
+    </form>
+    <!-- category -->
+    <form *ngIf="selectType==2" style="width: 100%; display: flex; flex-direction: column; align-items: center;" #categoryForm="ngForm" (ngSubmit)="onSubmitCategory(categoryForm)">
+      <div style="width: 80%; display: flex; justify-content: center; flex-direction: column; align-items: center;">
+          <div class="MuiGrid-root css-rfnosa">
+            <div class="MuiGrid-root css-rfnosa" style="height: 150px; width: 350px; display: flex; justify-content: center; align-items: center; background-color: rgb(242, 242, 242); border-radius: 12px; margin: 8px; border: 2px solid; position: relative">
+              <input name="category" (change)="onSelectCategoryFile($event)" type="file" accept="image/*" style="height: 150px; opacity: 0; position: absolute; left: 0; right: 0; bottom: 0; top: 0;">
+              <svg *ngIf="uploadFilecategory" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true"
+                viewBox="0 0 24 24" data-testid="AddIcon" style="color: rgb(15, 21, 29);">
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"></path>
+              </svg>
+              <img *ngIf="!uploadFilecategory" [src]="categoryUrl" style="border-radius: 12px;" width="350px" height="150px" #photo />
+            </div>
+            <p *ngIf="uploadFilecategory" class="MuiTypography-root MuiTypography-body1 css-16gzibi" style="font-size: 12px; line-height: 18px; font-weight: 300; color: rgb(109, 109, 109); text-align: center;">
+              Change Category</p>
+              <div *ngIf="!uploadFilecategory">
+                <div (click)="resetImgCardcategory()" style="background-color: rgb(255, 92, 104); height: 50px; width: 50px; border-radius: 50px; display: flex; justify-content: center; align-items: center; margin: auto;">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.25 4.5H15.75V3.375C15.75 2.87772 15.5525 2.40081 15.2008 2.04917C14.8492 1.69754 14.3723 1.5 13.875 1.5H10.125C9.62772 1.5 9.15081 1.69754 8.79917 2.04917C8.44754 2.40081 8.25 2.87772 8.25 3.375V4.5H3.75C3.55109 4.5 3.36032 4.57902 3.21967 4.71967C3.07902 4.86032 3 5.05109 3 5.25C3 5.44891 3.07902 5.63968 3.21967 5.78033C3.36032 5.92098 3.55109 6 3.75 6H4.54688L5.4375 20.2931C5.50406 21.5517 6.46875 22.5 7.6875 22.5H16.3125C17.5373 22.5 18.4828 21.5728 18.5625 20.2969L19.4531 6H20.25C20.4489 6 20.6397 5.92098 20.7803 5.78033C20.921 5.63968 21 5.44891 21 5.25C21 5.05109 20.921 4.86032 20.7803 4.71967C20.6397 4.57902 20.4489 4.5 20.25 4.5ZM9.02672 19.5H9C8.80563 19.5001 8.61881 19.4248 8.4789 19.2899C8.33899 19.1549 8.25692 18.971 8.25 18.7767L7.875 8.27672C7.86791 8.07781 7.94014 7.88423 8.07578 7.73856C8.21142 7.5929 8.39937 7.50709 8.59828 7.5C8.79719 7.49291 8.99077 7.56514 9.13644 7.70078C9.2821 7.83642 9.36791 8.02437 9.375 8.22328L9.75 18.7233C9.75357 18.8218 9.73769 18.92 9.70326 19.0124C9.66884 19.1048 9.61654 19.1894 9.54937 19.2616C9.48219 19.3337 9.40146 19.3919 9.31178 19.4328C9.2221 19.4737 9.12523 19.4966 9.02672 19.5ZM12.75 18.75C12.75 18.9489 12.671 19.1397 12.5303 19.2803C12.3897 19.421 12.1989 19.5 12 19.5C11.8011 19.5 11.6103 19.421 11.4697 19.2803C11.329 19.1397 11.25 18.9489 11.25 18.75V8.25C11.25 8.05109 11.329 7.86032 11.4697 7.71967C11.6103 7.57902 11.8011 7.5 12 7.5C12.1989 7.5 12.3897 7.57902 12.5303 7.71967C12.671 7.86032 12.75 8.05109 12.75 8.25V18.75ZM14.25 4.5H9.75V3.375C9.74943 3.3256 9.75875 3.27658 9.77739 3.23083C9.79604 3.18507 9.82364 3.14351 9.85857 3.10858C9.89351 3.07364 9.93507 3.04604 9.98083 3.02739C10.0266 3.00875 10.0756 2.99943 10.125 3H13.875C13.9244 2.99943 13.9734 3.00875 14.0192 3.02739C14.0649 3.04604 14.1065 3.07364 14.1414 3.10858C14.1764 3.14351 14.204 3.18507 14.2226 3.23083C14.2413 3.27658 14.2506 3.3256 14.25 3.375V4.5ZM15.75 18.7767C15.7431 18.971 15.661 19.1549 15.5211 19.2899C15.3812 19.4248 15.1944 19.5001 15 19.5H14.9728C14.8743 19.4965 14.7775 19.4736 14.6879 19.4327C14.5983 19.3917 14.5176 19.3335 14.4505 19.2614C14.3833 19.1893 14.3311 19.1046 14.2967 19.0123C14.2623 18.92 14.2464 18.8217 14.25 18.7233L14.625 8.22328C14.6285 8.12479 14.6514 8.02795 14.6923 7.9383C14.7332 7.84865 14.7914 7.76794 14.8636 7.70078C14.9357 7.63361 15.0203 7.58132 15.1127 7.54687C15.205 7.51242 15.3032 7.49649 15.4017 7.5C15.5002 7.50351 15.597 7.52638 15.6867 7.56732C15.7763 7.60825 15.8571 7.66644 15.9242 7.73856C15.9914 7.81069 16.0437 7.89534 16.0781 7.98767C16.1126 8.08001 16.1285 8.17823 16.125 8.27672L15.75 18.7767Z" fill="#FEFEFF"></path>
+                  </svg>
+                </div>
+              </div>
+          </div>
+        <div class="MuiFormControl-root MuiFormControl-fullWidth css-xa8qgh"><label
+          class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary css-1r2429a"
+          data-shrink="true">Category Name:<span class="css-1hu9301">*</span></label>
+        <div class="MuiFormControl-root MuiTextField-root css-174xox1">
+          <div
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
+            <input aria-invalid="false" name="categoryName" type="text"
+              class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" id="mui-12" required [(ngModel)]="categoryName">
+            <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
+              <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
+            </fieldset>
+          </div>
+        </div>
+        <div class="css-0"></div>
+      </div>
+      </div>
+      <div style="margin: 20px;">
+        <button [disabled]="!(categoryForm.form.valid && !uploadFilecategory)"
+          class="btn btn-primary"
+          type="submit" disabled="">Upload Category</button></div>
+    </form>
+  </div>
+</div>

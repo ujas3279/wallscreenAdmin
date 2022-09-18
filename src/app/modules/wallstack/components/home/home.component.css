@@ -1,0 +1,69 @@
+.css-tn9s30 {
+  bottom: 24px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+}
+
+.css-tn9s30 {
+  z-index: 1400;
+  position: fixed;
+  display: flex;
+  left: 8px;
+  right: 8px;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  bottom: 8px;
+}
+
+.css-1akc5td.MuiPaper-root {
+  height: 56px;
+  border-radius: 4px;
+}
+
+.css-1akc5td {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  background-color: rgb(7, 115, 242);
+  color: rgb(255, 255, 255);
+  padding: 7.5px 16px;
+  box-shadow: rgba(43, 180, 114, 0.07) 0px -1px 8px;
+  display: flex;
+  border-radius: 0px;
+  -moz-box-align: center;
+  align-items: center;
+}
+
+.css-1akc5td .MuiAlert-icon {
+  margin-right: 10px;
+}
+
+.css-1akc5td .MuiAlert-icon, .css-1akc5td .MuiAlert-message, .css-1akc5td .MuiAlert-action, .css-1akc5td .MuiAlert-action button {
+  padding: 0px;
+}
+
+.css-1l54tgj {
+  margin-right: 12px;
+  padding: 7px 0px;
+  display: flex;
+  font-size: 22px;
+  opacity: 0.9;
+}
+
+.css-1l54tgj {
+  font-size: 22px;
+}
+
+.css-1akc5td {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.43;
+  color: rgb(255, 255, 255);
+}
+

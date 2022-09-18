@@ -1,0 +1,152 @@
+.css-1d3bbye {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+/* @media (min-width: 1536px) */
+.css-1q2d48a {
+  flex-basis: 25%;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  max-width: 25%;
+}
+
+/* @media (min-width: 900px) */
+.css-1q2d48a {
+  flex-basis: 50%;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  max-width: 50%;
+}
+
+/* @media (min-width: 600px) */
+.css-1q2d48a {
+  flex-basis: 0%;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  max-width: 100%;
+}
+
+.css-1q2d48a {
+  box-sizing: border-box;
+  margin: 0px;
+  flex-direction: row;
+  flex-basis: 0%;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  max-width: 100%;
+  width: 327px;
+}
+
+.css-nmqra9 {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  overflow: hidden;
+  background: rgb(254, 254, 255);
+  border: 1px solid rgb(232, 235, 239);
+  box-sizing: border-box;
+  box-shadow: rgb(28 48 74 / 8%) 0px 1px 18px -1px;
+  border-radius: 8px;
+}
+
+.css-1jluznr {
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  text-align: inherit;
+  width: 100%;
+}
+
+.css-pqdqbj {
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+  transition: -webkit-filter .3s;
+  transition: filter .3s;
+  transition: filter .3s,-webkit-filter .3s;
+}
+
+.lazy-load-image-background.blur {
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+}
+
+.lazy-load-image-background.blur.lazy-load-image-loaded>img {
+  opacity: 1;
+  transition: opacity .3s;
+}
+
+img {
+  height: 210px;
+  aspect-ratio: auto 330 / 210;
+  width: 330px;
+}
+
+.css-1qw96cp {
+  padding: 16px;
+}
+
+.css-1xroguk {
+  margin: 0px;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.css-jo3ec3 {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  inset: 0px;
+  border-radius: inherit;
+  opacity: 0;
+  background-color: currentcolor;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.css-w0pj6f {
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  inset: 0px;
+  border-radius: inherit;
+}
+
+.lazy-load-image-background.blur>img {
+    opacity: 0;
+}

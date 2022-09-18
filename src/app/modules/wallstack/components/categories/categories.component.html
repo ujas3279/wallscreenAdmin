@@ -1,0 +1,352 @@
+<app-logo></app-logo>
+<app-header></app-header>
+<div role="tabpanel" aria-labelledby="undefined-tab-0" id="undefined-tabpanel-0" content="[object Object]" class="css-0"
+  hidden=""></div>
+<div role="tabpanel" aria-labelledby="undefined-tab-1" id="undefined-tabpanel-1" content="[object Object]" class="css-0"
+  hidden=""></div>
+<div role="tabpanel" aria-labelledby="undefined-tab-2" id="undefined-tabpanel-2" content="[object Object]"
+  class="css-0">
+  <div class="MuiGrid-root MuiGrid-container css-1d3bbye"
+    style="display: flex; margin-top: 20px; justify-content: center;">
+    <div *ngFor="let category of allcategories" class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="{{category.url}}"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">{{category.categoryName}}</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <!-- <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/anime.png" style="object-fit: cover;"></span>
+          </div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Anime</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/mesh-gradient%20%282%29.png"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Gradient</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/163920.png"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Minimal</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/popular2.png"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Superhero</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/design.jpg"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Abstract</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/architecture.png"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Architecture</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/gaming.jpeg"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Gaming</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/wallhaven-28qzvm.jpg"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Cars</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/8383991A-0695-4427-9682-357947BD38E5.jpeg"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Animals</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/series.jpg"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">TV Shows</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/movie.jpg" style="object-fit: cover;"></span>
+          </div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Movies</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/SpaceBanner.jpg"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Space</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/Male.png" style="object-fit: cover;"></span>
+          </div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Boys</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/girl.jpg" style="object-fit: cover;"></span>
+          </div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Girls</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/wallhaven-967zyk.jpg"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Nature</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/Artwork.jpg"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Artwork</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/Coffee%20Code_8228-01.jpeg"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Quotes</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/20.jpg" style="object-fit: cover;"></span>
+          </div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Other</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div>
+    <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 MuiGrid-grid-lg-3 css-1q2d48a"
+      style="display: flex; justify-content: center; align-items: center;">
+      <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-nmqra9"
+        style="border: none; margin: 10px; background-color: rgb(24, 39, 58); color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;">
+        <button class="MuiButtonBase-root MuiCardActionArea-root css-1jluznr" tabindex="0" type="button">
+          <div class="MuiCardMedia-root css-pqdqbj"><span
+              class=" lazy-load-image-background blur lazy-load-image-loaded"
+              style="color: transparent; display: inline-block;"><img height="210" width="330" alt="cat"
+                src="https://wallpaper-stack-app.s3.amazonaws.com/Category/Premium.png"
+                style="object-fit: cover;"></span></div>
+          <div class="MuiCardContent-root css-1qw96cp"
+            style="padding: 15px 5px 15px 10px; display: flex; justify-content: space-between; align-items: center;">
+            <p class="MuiTypography-root MuiTypography-body2 css-1xroguk">Premium</p>
+          </div><span class="MuiCardActionArea-focusHighlight css-jo3ec3"></span><span
+            class="MuiTouchRipple-root css-w0pj6f"></span>
+        </button></div>
+    </div> -->
+  </div>
+</div>
