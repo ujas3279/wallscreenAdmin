@@ -9,15 +9,15 @@ import { WallPaperPost } from '../wallpaperPost';
 export class PostService {
 
   private apiUrl = "http://localhost:3000/posts";
-  private wallpaperapiUrl = "http://54.166.208.117:5000/api/wallpapers";
-  private wallPaperById = "http://54.166.208.117:5000/api/wallpaper";
-  private updateWallpaper = "http://54.166.208.117:5000/api/wallpaper";
-  private categoryUrl = "http://54.166.208.117:5000/api/categories";
-  private bannerUrl = "http://54.166.208.117:5000/api/banners";
-  private createWallpaperUrl = "http://54.166.208.117:5000/api/wallpaper/create";
-  private createbannerUrl = "http://54.166.208.117:5000/api/banner/create";
-  private createCategoryUrl = "http://54.166.208.117:5000/api/category/create"
-  private deleteWallpaperUrl = "http://54.166.208.117:5000/api//wallpaper"
+  private wallpaperapiUrl = "http://52.204.16.111:5000/api/wallpapers";
+  private wallPaperById = "http://52.204.16.111:5000/api/wallpaper";
+  private updateWallpaper = "http://52.204.16.111:5000/api/wallpaper";
+  private categoryUrl = "http://52.204.16.111:5000/api/categories";
+  private bannerUrl = "http://52.204.16.111:5000/api/banners";
+  private createWallpaperUrl = "http://52.204.16.111:5000/api/wallpaper/create";
+  private createbannerUrl = "http://52.204.16.111:5000/api/banner/create";
+  private createCategoryUrl = "http://52.204.16.111:5000/api/category/create"
+  private deleteWallpaperUrl = "http://52.204.16.111:5000/api//wallpaper"
 
   constructor(private http: HttpClient) { }
 
