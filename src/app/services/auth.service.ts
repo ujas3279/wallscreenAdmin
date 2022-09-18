@@ -33,7 +33,7 @@ export class AuthService {
   // receiving an object(email, and pwd) and returning observable
   login({ name, password }: any): Observable<any> {
     // here, we are doing static check
-    if (name === 'yash@frost' && password === 'uIkhs57@weTOpls') {
+    if (name === 'Admin' && password === 'Admin@123') {
       // storing a random token inside localstorage and returning one observable variable
       this.setToken('abcdefghijklmnopqrstuvwxyz');
       return of({ name: 'Ujas Patel', email: 'yash@frost'});
