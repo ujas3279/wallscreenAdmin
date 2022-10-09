@@ -4,8 +4,7 @@
 <div role="tabpanel" aria-labelledby="undefined-tab-1" id="undefined-tabpanel-1" content="[object Object]" class="css-0" hidden=""></div>
 <div role="tabpanel" aria-labelledby="undefined-tab-2" id="undefined-tabpanel-2" content="[object Object]" class="css-0" hidden=""></div>
 
-<div role="tabpanel" aria-labelledby="undefined-tab-3" id="undefined-tabpanel-3" content="[object Object]"
-  class="css-0">
+<div role="tabpanel" aria-labelledby="undefined-tab-3" id="undefined-tabpanel-3" content="[object Object]" class="css-0">
   <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
     <span *ngIf="selectType==0"
       class="MuiTypography-root MuiTypography-heading3 css-h7g6tj" style="margin-top: 20px;">Add New Wallpaper</span>
@@ -74,7 +73,8 @@
           <span class="MuiTypography-root MuiTypography-metadata css-gidppy">Category:<span style="color: red;">*</span></span>
           <div required="" class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth css-aj8fw6" style="margin-top: 5px;">
             <select class="form-select" required [(ngModel)]="category" name="category">
-              <option *ngFor="let category of allcategories" value="{{category._id}}" selected>{{category.categoryName}}</option>
+              <!-- <option [ngValue]="undefined" disabled>Select Category</option> -->
+              <option *ngFor="let category of allcategories" value="{{category._id}}">{{category.categoryName}}</option>
             </select>
           </div>
         </div>
@@ -82,8 +82,8 @@
           <span class="MuiTypography-root MuiTypography-metadata css-gidppy">isPremium:<span style="color: red;">*</span></span>
           <div required="" class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth css-aj8fw6" style="margin-top: 5px;">
             <select class="form-select" required [(ngModel)]="isPremium" name="isPremium">
-              <option selected>true</option>
-              <option>false</option>
+              <option >true</option>
+              <option >false</option>
             </select>
           </div>
         </div>
@@ -109,7 +109,7 @@
           <div class="MuiFormControl-root MuiTextField-root css-174xox1">
             <div
               class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
-              <input aria-invalid="false" name="downloads" placeholder="eg. 0" type="number"
+              <input aria-invalid="false" min="0" name="downloads" placeholder="eg. 0" type="number"
                 class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" value="" id="mui-12" required [(ngModel)]="downloads">
               <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
                 <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
@@ -124,7 +124,7 @@
           <div class="MuiFormControl-root MuiTextField-root css-174xox1">
             <div
               class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1rvehi0">
-              <input aria-invalid="false" name="views" placeholder="eg. 0" type="number"
+              <input aria-invalid="false" min="0" name="views" placeholder="eg. 0" type="number"
                 class="MuiOutlinedInput-input MuiInputBase-input css-13ny0hi" value="" id="mui-13" required [(ngModel)]="views">
               <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-igs3ac">
                 <legend class="css-hdw1oc"><span class="notranslate">&ZeroWidthSpace;</span></legend>
@@ -151,9 +151,12 @@
         </div> -->
       </div>
       <div style="margin: 20px;">
-        <button [disabled]="!(wallPaperForm.form.valid && !uploadFileWallpaper)"
+        <button *ngIf="!isUploading" [disabled]="!(wallPaperForm.form.valid && !uploadFileWallpaper)"
           class="btn btn-primary"
           type="submit" id="mui-14">Upload Wallpaper</button>
+          <button *ngIf="isUploading"
+          class="btn btn-primary" type="button" disabled
+            ><span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Uploading..</button>
         </div>
     </form>
     <!-- banner -->
@@ -180,7 +183,8 @@
           </div>
         <div class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary css-ec37jo" style="margin-top: 20px;">
           <select class="form-select" (change)="onBannerSelected()" #bannerteams [(ngModel)]="type" name="type">
-            <option selected>Popular</option>
+            <option [ngValue]="undefined" disabled>Select Type</option>
+            <option>Popular</option>
             <option>Trending</option>
             <option>New</option>
           </select>
@@ -192,14 +196,19 @@
             class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth css-aj8fw6"
             style="margin-top: 5px;">
             <select class="form-select" required [(ngModel)]="category" name="category">
-              <option *ngFor="let category of allcategories" value="{{category._id}}" selected>{{category.categoryName}}</option>
+              <option [ngValue]="undefined" disabled>Select Category</option>
+              <option *ngFor="let category of allcategories" value="{{category._id}}">{{category.categoryName}}</option>
             </select>
           </div>
         </div>
       </div>
       <div style="margin: 20px;">
-        <button class="btn btn-primary"
-          type="submit" [disabled]="!(bannerForm.form.valid && !uploadFileBanner)">Upload Banner</button></div>
+        <button *ngIf="!isUploading" class="btn btn-primary"
+          type="submit" [disabled]="!(bannerForm.form.valid && !uploadFileBanner)">Upload Banner</button>
+          <button *ngIf="isUploading"
+          class="btn btn-primary" type="button" disabled
+            ><span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Uploading..</button>
+        </div>
     </form>
     <!-- category -->
     <form *ngIf="selectType==2" style="width: 100%; display: flex; flex-direction: column; align-items: center;" #categoryForm="ngForm" (ngSubmit)="onSubmitCategory(categoryForm)">
@@ -240,9 +249,13 @@
       </div>
       </div>
       <div style="margin: 20px;">
-        <button [disabled]="!(categoryForm.form.valid && !uploadFilecategory)"
+        <button *ngIf="!isUploading" [disabled]="!(categoryForm.form.valid && !uploadFilecategory)"
           class="btn btn-primary"
-          type="submit" disabled="">Upload Category</button></div>
+          type="submit" disabled="">Upload Category</button>
+          <button *ngIf="isUploading"
+          class="btn btn-primary" type="button" disabled>
+          <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>Uploading..</button>
+        </div>
     </form>
   </div>
 </div>

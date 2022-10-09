@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -16,8 +18,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     NotFoundComponent,
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule, HttpClientModule, FormsModule
+    BrowserModule, HttpClientModule, BrowserAnimationsModule,
+    AppRoutingModule, FormsModule, ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

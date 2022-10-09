@@ -42,6 +42,7 @@
 
 .css-16j456z.Mui-selected {
   color: rgb(255, 44, 55);
+  border-bottom: 2px solid rgb(255, 44, 55);
 }
 
 .css-16j456z {
@@ -78,6 +79,23 @@
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
   -webkit-box-flex: 1;
+}
+
+.test {
+  background-position: center;
+  transition: background 1.5s;
+}
+
+.test:hover {
+  background-image: radial-gradient(circle, transparent 1%, rgba(255, 44, 55, 0.5) 1%);
+  background-position: center;
+  background-size: 20000%;
+  transition-delay: 0.1s;
+}
+
+.test:active {
+  transition: background 0s;
+  background-size: 100%;
 }
 
 .css-vubbuv {

@@ -1,8 +1,8 @@
 import { Location } from '@angular/common';
-import { HttpHeaders } from '@angular/common/http';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { PostService } from '../../../../services/post.service';
 
 @Component({
@@ -23,13 +23,16 @@ export class AddNewWallpaperComponent implements OnInit {
   selectedItem = '';
   selectType = 0;
 
-  isPremium: any
+  isPremium?: boolean;
 
   uploadFileWallpaper: boolean = true;
   uploadFileBanner: boolean = true;
   uploadFilecategory: boolean = true;
 
   allcategories: any;
+  errMsg: any
+  errMsgToggle: boolean = true;
+  isUploading: boolean = false;
 
   // wallpaper
   displayName?: string;
@@ -43,11 +46,13 @@ export class AddNewWallpaperComponent implements OnInit {
   // category
   categoryName?: string;
 
-  constructor(public _router: Router, public _location: Location, private postService: PostService) { }
+  constructor(public _router: Router, public _location: Location, private postService: PostService, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.postService.getAllCategories().subscribe((retrievedData) => {
       this.allcategories = retrievedData.data;
+      this.category = this.allcategories[0]._id;
+      this.isPremium = false;
     })
   }
 
@@ -126,6 +131,7 @@ export class AddNewWallpaperComponent implements OnInit {
   }
 
   onSubmitWallpaper(form: any) {
+    this.isUploading = true;
     const formData = new FormData();
     formData.set('photo', this.fileToUploadWallPaper);
     formData.set('displayName', form.value.displayName);
@@ -133,31 +139,82 @@ export class AddNewWallpaperComponent implements OnInit {
     formData.set('isPremium', form.value.isPremium);
     formData.set('downloads', form.value.downloads);
     formData.set('views', form.value.views);
-    this.uploadFileWallpaper = true;
-    this.postService.addWallpaper(formData).subscribe();
-    this.postService.getitemData().subscribe();
-    this._router.navigate(['admin']);
-    this.wallPaperForm.reset();
+    this.postService.addWallpaper(formData).subscribe((resWallpaperData) => {
+      if (resWallpaperData.success == true) {
+        this.uploadFileWallpaper = true;
+        this.postService.getitemData().subscribe();
+        this.toastr.success(resWallpaperData.message, 'SUCCESS', {
+          timeOut: 2000,
+          positionClass: 'toast-bottom-center'
+        })
+        this._router.navigate(['admin/add_wallpaper']);
+        this.wallPaperForm.reset();
+        this.isUploading = false;
+        this.ngOnInit();
+      }
+      else {
+        this.toastr.error('Something Went Wrong', 'Error', {
+          timeOut: 2000,
+          positionClass: 'toast-bottom-center'
+        })
+        this.isUploading = false;
+      }
+    });
   }
 
   onSubmitbanner(formBanner: any) {
+    this.isUploading = true;
     const formData = new FormData();
     formData.set('photo', this.fileToUploadBanner);
     formData.set('type', this.bannerteams.nativeElement.value);
     formData.set('category', formBanner.value.category);
-    this.postService.addbanner(formData).subscribe();
-    this.postService.getAllbanners().subscribe();
-    this._router.navigate(['admin']);
-    this.bannerForm.reset();
+    this.postService.addbanner(formData).subscribe((resBannerData) => {
+      if (resBannerData.success == true) {
+          this.uploadFileBanner = true;
+          this.postService.getAllbanners().subscribe();
+          this.toastr.success(resBannerData.message, 'SUCCESS', {
+            timeOut: 3000,
+            positionClass: 'toast-bottom-center'
+          })
+          this._router.navigate(['admin/add_wallpaper']);
+          this.bannerForm.reset();
+          this.isUploading = false;
+      }
+      else {
+        this.toastr.error(resBannerData.message, 'Error', {
+          timeOut: 4000,
+          positionClass: 'toast-bottom-center'
+        })
+        this.isUploading = false;
+      }
+    });
   }
 
   onSubmitCategory(formCategory: any) {
+    this.isUploading = true;
     const formData = new FormData();
     formData.set('photo', this.filetoUploadCategory);
     formData.set('categoryName', formCategory.value.categoryName);
-    this.postService.addcategory(formData).subscribe();
-    this.postService.getAllCategories().subscribe();
-    this._router.navigate(['admin']);
-    this.categoryForm.reset();
+    this.postService.addcategory(formData).subscribe((resCategoryData) => {
+      if (resCategoryData.success == true) {
+        this.uploadFilecategory = true;
+        this.postService.getAllCategories().subscribe();
+        this.ngOnInit();
+        this.toastr.success(resCategoryData.message, 'SUCCESS', {
+          timeOut: 3000,
+          positionClass: 'toast-bottom-center'
+        })
+        this._router.navigate(['admin/add_wallpaper']);
+        this.categoryForm.reset();
+        this.isUploading = false;
+      }
+      else {
+        this.toastr.error(resCategoryData.message, 'Error', {
+          timeOut: 4000,
+          positionClass: 'toast-bottom-center'
+        })
+        this.isUploading = false;
+      }
+    });
   }
 }

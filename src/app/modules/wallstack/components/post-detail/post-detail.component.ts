@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { PostService } from '../../../../services/post.service';
 
 @Component({
@@ -32,7 +33,7 @@ export class PostDetailComponent implements OnInit {
   editbuttonclicked: boolean = true;
   deleteButtonClicked: boolean = true;
 
-  constructor(private postService: PostService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private postService: PostService, private route: ActivatedRoute, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
 
@@ -61,8 +62,22 @@ export class PostDetailComponent implements OnInit {
     formData.set('views', updateWallpaperFrom.value.views);
     formData.set('downloads', updateWallpaperFrom.value.downloads);
     formData.set('isPremium', updateWallpaperFrom.value.isPremium);
-    this.postService.updateWallpaperPost(formData).subscribe();
-    this.postService.getitemData();
+    this.postService.updateWallpaperPost(formData).subscribe((resUpdatedData) => {
+      if (resUpdatedData.success == true) {
+        this.editbuttonclicked = true;
+        this.postService.getitemData().subscribe();
+        this.toastr.success(resUpdatedData.message, 'SUCCESS', {
+          timeOut: 3000,
+          positionClass: 'toast-bottom-center'
+        })
+      }
+      else {
+        this.toastr.error(resUpdatedData.message, 'Error', {
+          timeOut: 4000,
+          positionClass: 'toast-bottom-center'
+        })
+      }
+    });
   }
 
   editButton() {
@@ -70,8 +85,22 @@ export class PostDetailComponent implements OnInit {
   }
 
   onDelete(id: any) {
-    this.postService.deleteWallpaper(id).subscribe();
-    this.postService.getitemData().subscribe();
+    this.postService.deleteWallpaper(id).subscribe((resDeleteData) => {
+      if (resDeleteData.success == true) {
+        this.postService.getitemData().subscribe();
+        this.router.navigate(['/']);
+        this.toastr.success(resDeleteData.message, 'SUCCESS', {
+          timeOut: 3000,
+          positionClass: 'toast-bottom-center'
+        })
+      }
+      else {
+        this.toastr.error(resDeleteData.message, 'Error', {
+          timeOut: 4000,
+          positionClass: 'toast-bottom-center'
+        })
+      }
+    });
   }
 
   cancel() {

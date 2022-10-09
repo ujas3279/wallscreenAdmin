@@ -117,13 +117,17 @@ label {
   width: 100%;
 }
 
-/* @media (min-width: 1200px) */
-.css-8pdr4s {
-    flex-basis: 50%;
-    -webkit-box-flex: 0;
-    flex-grow: 0;
-    max-width: 50%;
+@media (max-width: 720px) {
+  .css-1d3bbye {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: column;
+    width: 100%;
+  }
 }
+
+/* @media (min-width: 1200px) *
 
 /* @media (min-width: 900px) */
 .css-8pdr4s {
@@ -131,6 +135,14 @@ label {
   -webkit-box-flex: 0;
   flex-grow: 0;
   max-width: 50%;
+}
+@media (max-width: 720px) {
+  .css-8pdr4s {
+    flex-basis: 50%;
+    -webkit-box-flex: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
 }
 
 .css-8pdr4s {

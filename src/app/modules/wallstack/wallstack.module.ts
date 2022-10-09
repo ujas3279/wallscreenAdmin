@@ -13,8 +13,10 @@ import { WallStackRoutingModule } from './wallstack-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
-
-
+import { ToastrModule } from 'ngx-toastr';import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+import { ModalComponent } from './components/modal/modal.component';
+;
 
 @NgModule({
   declarations: [
@@ -27,11 +29,12 @@ import { AdmindashboardComponent } from './components/admindashboard/admindashbo
     PostDetailComponent,
     AddNewWallpaperComponent,
     LogoComponent,
-    AdmindashboardComponent
+    AdmindashboardComponent,
+    ModalComponent
   ],
   imports: [
-    CommonModule, WallStackRoutingModule, HttpClientModule,
-    ReactiveFormsModule, FormsModule
+    WallStackRoutingModule, HttpClientModule,
+    ReactiveFormsModule, FormsModule, CommonModule, ToastrModule.forRoot()
   ]
 })
 export class WallstackModule { }

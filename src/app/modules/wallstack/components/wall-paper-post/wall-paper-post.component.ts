@@ -8,7 +8,6 @@ import { PostService } from '../../../../services/post.service';
 })
 export class WallPaperPostComponent implements OnInit {
 
-  // @Input() post1: any;
   posts: any;
 
   constructor(private postService: PostService) { }
@@ -16,8 +15,6 @@ export class WallPaperPostComponent implements OnInit {
   ngOnInit(): void {
     this.postService.getitemData().subscribe((retrievedData) => {
       this.posts = retrievedData['data']['data'];
-      // console.log("retrievedAllData: ", retrievedData['data']['data']);
-      // console.log("retrievedAllData: ", retrievedData['data']['data'][0]);
     })
   }
 }

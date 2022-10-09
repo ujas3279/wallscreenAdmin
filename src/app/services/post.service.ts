@@ -1,29 +1,36 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { WallPaperPost } from '../wallpaperPost';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
-  private apiUrl = "http://localhost:3000/posts";
-  private wallpaperapiUrl = "http://52.204.16.111:5000/api/wallpapers";
-  private wallPaperById = "http://52.204.16.111:5000/api/wallpaper";
-  private updateWallpaper = "http://52.204.16.111:5000/api/wallpaper";
-  private categoryUrl = "http://52.204.16.111:5000/api/categories";
-  private bannerUrl = "http://52.204.16.111:5000/api/banners";
-  private createWallpaperUrl = "http://52.204.16.111:5000/api/wallpaper/create";
-  private createbannerUrl = "http://52.204.16.111:5000/api/banner/create";
-  private createCategoryUrl = "http://52.204.16.111:5000/api/category/create"
-  private deleteWallpaperUrl = "http://52.204.16.111:5000/api//wallpaper"
+  private wallpaperapiUrl = "https://api.wallscreen.ml/api/wallpapers";
+  private wallPaperById = "https://api.wallscreen.ml/api/wallpaper";
+  private updateWallpaper = "https://api.wallscreen.ml/api/wallpaper";
+  private updateCategory = "https://api.wallscreen.ml/api/category"
+  private categoryUrl = "https://api.wallscreen.ml/api/categories";
+  private bannerUrl = "https://api.wallscreen.ml/api/banners";
+  private createWallpaperUrl = "https://api.wallscreen.ml/api/wallpaper/create";
+  private createbannerUrl = "https://api.wallscreen.ml/api/banner/create";
+  private createCategoryUrl = "https://api.wallscreen.ml/api/category/create"
+  private deleteWallpaperUrl = "https://api.wallscreen.ml/api/wallpaper";
+  private deleteCategoryUrl = "https://api.wallscreen.ml/api/category";
+  private deleteBannerUrl = "https://api.wallscreen.ml/api/banner";
+  private getKey = "https://api.wallscreen.ml/api/key/634178edc361c4d45b46b434";
+  private createKey = "https://api.wallscreen.ml/api/key/create/634178edc361c4d45b46b434"
 
   constructor(private http: HttpClient) { }
 
-  // getPosts(): Observable<WallPaperPost[]> {
-  //   return this.http.get<WallPaperPost[]>(this.apiUrl)
-  // }
+  getKeyData(): Observable<any> {
+    return this.http.get(this.getKey);
+  }
+
+  postKeyData(post: any): Observable<any> {
+    return this.http.post(this.createKey, post);
+  }
 
   getitemData(): Observable<any> {
     return this.http.get(this.wallpaperapiUrl);
@@ -35,11 +42,6 @@ export class PostService {
 
   getAllbanners(): Observable<any> {
     return this.http.get(this.bannerUrl);
-  }
-
-  selectedPostDetail(id: number): Observable<WallPaperPost> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.get<WallPaperPost>(url);
   }
 
   selectedWallpaperData(id: number): Observable<any> {
@@ -62,28 +64,30 @@ export class PostService {
     return this.http.post(this.createCategoryUrl, post);
   }
 
-  // deletePost(id: number): Observable<WallPaperPost[]> {
-  //   console.log("id service: ", id);
-  //   // using ES6 template literals
-  //   const url = `${this.apiUrl}/${id}`;
-  //   return this.http.delete<WallPaperPost[]>(url);
-  // }
-
   // deleteWallpaper
   deleteWallpaper(id: string): Observable<any> {
     const url = `${this.deleteWallpaperUrl}/${id}`;
     return this.http.delete(url);
   }
 
-  // editPost(post: any): Observable<WallPaperPost> {
-  //   console.log("post service: ", post);
-  //   const url = `${this.apiUrl}/${post.id}`;
-  //   return this.http.put<WallPaperPost>(url, post);
-  // }
+  deleteCategory(id: string): Observable<any> {
+    const url = `${this.deleteCategoryUrl}/${id}`;
+    return this.http.delete(url);
+  }
+
+  deleteBanner(id: string): Observable<any> {
+    const url = `${this.deleteBannerUrl}/${id}`;
+    return this.http.delete(url);
+  }
 
   updateWallpaperPost(post: any): Observable<any> {
     const _id = post.get('_id');
     const url = `${this.updateWallpaper}/${_id}`;
+    return this.http.put(url, post);
+  }
+
+  updateCategoryName(_id: any, post: any): Observable<any> {
+    const url = `${this.updateCategory}/${_id}`;
     return this.http.put(url, post);
   }
 }

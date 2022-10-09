@@ -8,12 +8,14 @@ import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "forgot-password", component: ForgotpasswordComponent },
+  // if no route is present then redirect to login
   { path: '', redirectTo: '/login', pathMatch: 'full' },
+  // adding lazy load module - if user is going to visit this route then only we are going to load this module
   { path: 'admin',
     canActivate: [AuthGuard],
     loadChildren: () => import('./modules/wallstack/wallstack.module').then((m) =>  m.WallstackModule),
   },
-  // { path: "**", component: NotFoundComponent },
+  { path: "**", component: NotFoundComponent },
 ];
 
 @NgModule({
