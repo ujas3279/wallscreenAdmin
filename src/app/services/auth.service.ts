@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, of, throwError } from 'rxjs';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -32,13 +33,19 @@ export class AuthService {
 
   // receiving an object(email, and pwd) and returning observable
   login({ name, password }: any): Observable<any> {
+    var username = environment.username.split(" ");
+    var pass = environment.password.split(" ");
+    var success = false;
     // here, we are doing static check
-    if (name === 'Admin' && password === 'Admin@123') {
-      // storing a random token inside localstorage and returning one observable variable
-      this.setToken('abcdefghijklmnopqrstuvwxyz');
-      return of({ name: 'Ujas Patel', email: 'yash@frost'});
-    }
+    username.forEach((username,index)=>{
+      if (name === username && password === pass[index]) {
+        // storing a random token inside localstorage and returning one observable variable
+        this.setToken((((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1));
+        success = true;
+      }
+    })
+    if(success) return of({ name: 'Admin', email: 'Admin'});
     // if email and pwd not match, we throw error
-    return throwError(new Error('Failed to login'))
+    return throwError(new Error('Failed to login'));
   }
 }

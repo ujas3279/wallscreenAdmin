@@ -1,26 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from './../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
-
-  private wallpaperapiUrl = "https://api.wallscreen.ml/api/wallpapers";
-  private wallPaperById = "https://api.wallscreen.ml/api/wallpaper";
-  private updateWallpaper = "https://api.wallscreen.ml/api/wallpaper";
-  private updateCategory = "https://api.wallscreen.ml/api/category"
-  private categoryUrl = "https://api.wallscreen.ml/api/categories";
-  private bannerUrl = "https://api.wallscreen.ml/api/banners";
-  private createWallpaperUrl = "https://api.wallscreen.ml/api/wallpaper/create";
-  private createbannerUrl = "https://api.wallscreen.ml/api/banner/create";
-  private createCategoryUrl = "https://api.wallscreen.ml/api/category/create"
-  private deleteWallpaperUrl = "https://api.wallscreen.ml/api/wallpaper";
-  private deleteCategoryUrl = "https://api.wallscreen.ml/api/category";
-  private deleteBannerUrl = "https://api.wallscreen.ml/api/banner";
-  private getKey = "https://api.wallscreen.ml/api/key/634178edc361c4d45b46b434";
-  private createKey = "https://api.wallscreen.ml/api/key/create/634178edc361c4d45b46b434"
+  private api = environment.API;
+  private wallpaperapiUrl = this.api + "/wallpapers";
+  private wallPaperById = this.api + "/wallpaper";
+  private updateWallpaper = this.api + "/wallpaper";
+  private updateCategory = this.api + "/category"
+  private categoryUrl = this.api + "/categories";
+  private bannerUrl = this.api + "/banners";
+  private createWallpaperUrl = this.api + "/wallpaper/create";
+  private createbannerUrl = this.api + "/banner/create";
+  private createCategoryUrl = this.api + "/category/create"
+  private deleteWallpaperUrl = this.api + "/wallpaper";
+  private deleteCategoryUrl = this.api + "/category";
+  private deleteBannerUrl = this.api + "/banner";
+  private getKey = this.api + "/key/634178edc361c4d45b46b434";
+  private createKey = this.api + "/key/create/634178edc361c4d45b46b434"
 
   constructor(private http: HttpClient) { }
 
