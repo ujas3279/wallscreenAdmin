@@ -132,6 +132,9 @@ export class AddNewWallpaperComponent implements OnInit {
 
   onSubmitWallpaper(form: any) {
     this.isUploading = true;
+    let categorySearch = "";
+    let user = this.allcategories.find((user: { _id: any; }) => user._id === form.value.category);
+    categorySearch = user.categoryName;
     const formData = new FormData();
     formData.set('photo', this.fileToUploadWallPaper);
     formData.set('displayName', form.value.displayName);
@@ -139,6 +142,7 @@ export class AddNewWallpaperComponent implements OnInit {
     formData.set('isPremium', form.value.isPremium);
     formData.set('downloads', form.value.downloads);
     formData.set('views', form.value.views);
+    formData.set('categorySearch',categorySearch);
     this.postService.addWallpaper(formData).subscribe((resWallpaperData) => {
       if (resWallpaperData.success == true) {
         this.uploadFileWallpaper = true;
